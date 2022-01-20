@@ -21,5 +21,5 @@ puts(my_list.any? { |el| el == 2 })
 # puts true
 puts(my_list.any? { |el| el == 5 })
 # puts false
-print my_list.filter {|e| e.even?}
+print(my_list.filter { |e| e&.even? })
 # [2, 4]

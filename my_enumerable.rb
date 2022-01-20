@@ -16,10 +16,8 @@ module MyEnumerable
   def filter
     filtered_array = []
     each do |el|
-      if yield(el)
-        filtered_array.push(el)
-      end
+      filtered_array.push(el) if yield(el)
     end
-    filtered_array    
+    filtered_array
   end
 end
