@@ -3,7 +3,7 @@ module MyEnumerable
     each do |el|
       return false unless yield(el)
     end
-    true  
+    true
   end
 
   def any?
