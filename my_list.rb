@@ -2,8 +2,8 @@ class MyList
   require './my_enumerable'
   include MyEnumerable
 
-  def initialize(arr)
-    @list = arr
+  def initialize(*elements)
+    @list = elements
   end
 
   def each
@@ -11,7 +11,7 @@ class MyList
   end
 end
 
-my_list = MyList.new([1, 2, 3, 4])
+my_list = MyList.new(1,2,3,4)
 
 puts(my_list.all? { |e| e < 5 })
 # puts true
