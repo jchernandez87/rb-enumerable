@@ -5,4 +5,11 @@ module MyEnumerable
     end
     true  
   end
+
+  def any?
+    each do |el|
+      return true if yield(el)
+    end
+    false
+  end
 end
